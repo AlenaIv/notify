@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Notify</title>
+    <script>
+        function isEmail() {
+            var str = document.getElementById("email").value;
+            var status = document.getElementById("status");
+            var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+            if (re.test(str)) status.innerHTML = "Correct Email";
+            else status.innerHTML = "Email is incorrect";
+            if (isEmpty(str)) status.innerHTML = "The field is empty";
+        }
+        function isEmpty(str) {
+            return (str == null) || (str.length == 0);
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<header>
+    <!-- делаем врапер, чтобы фиксировать контент по ширине и выстаавить по центру-->
+    <div class="wrap">
+        <div class='header-content'>
+            <img class="logo" src="img/text.png">
+
+            <div class="intro">A great new free psd theme to showcase your new application.</div>
+            <ul class="icon">
+                <li class="device-icon fa fa-apple"></li>
+                <li class="device-icon fa fa-android"></li>
+                <li class="device-icon fa fa-windows"></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="wrap">
+    <div class="middle">
+        <div class="col-1">
+            <img src="img/middle-icon-1.png">
+
+            <div class="middle-caption"><b>Editable Theme</b></div>
+            <div class="middle-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                fringilla fringilla.
+            </div>
+        </div>
+        <div class="col-2">
+            <img src="img/middle-icon-2.png">
+
+            <div class="middle-caption"><b>Flat Design</b></div>
+            <div class="middle-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                fringilla fringilla.
+            </div>
+        </div>
+        <div class="col-3">
+            <img src="img/middle-icon-3.png">
+
+            <div class="middle-caption"><b>Reach Your Audience</b></div>
+            <div class="middle-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                fringilla fringilla.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grey">
+    <div class="wrap">
+        <div class="greycol-1">
+            <div class="grey-caption"><b>Get Notified Of Any Updates!</b></div>
+            <div class="grey-description">Loren ipsum dolor sit amet, concestetur adipiscing elit. Suspendisse fringilla
+                fringilla nisl congue congue. Maecenas nec condimentum libero, at elementum mauris. Phasellus eget nisi
+                dapibus, ultricies nisl at, henderit risusuis omare luctus id sollicituding ante lobortis at.
+            </div>
+            <form action="handler.php">
+                <input type="email" id="email" placeholder="Email Adress"><span id="status"></span>
+                <input type="button" class="button" value="Notify" onclick="isEmail()">
+            </form>
+
+        </div>
+        <div class="greycol-2">
+            <iframe width="450" height="253"
+                    src="https://www.youtube.com/embed/D3LpQkOpD20?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div class="wrap">
+    <div class="bottom">
+        <div class="quote">
+            <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum velit vitae nulla
+                molestie eu commodo nulla dapib us. Donec id sollicitudin urna. Integer at dui as leo fermentum varius
+                eleifend ut."
+            </blockquote>
+            <div class="quote-sign"><b>Jane Hunt</b></div>
+        </div>
+        <div class="faces">
+            <img src="img/face-2.jpg"></li>
+            <img src="img/face-3.jpg">
+            <img src="img/face-4.jpg">
+            <img src="img/face-5.jpg">
+            <img src="img/face-6.jpg">
+            <img src="img/face-7.jpg">
+            <img src="img/face-8.jpg">
+            <img src="img/face-9.jpg">
+            <img src="img/face-10.jpg">
+            <img src="img/face-11.jpg">
+            <img src="img/face-12.jpg">
+            <img src="img/face-13.jpg">
+            <img src="img/face-14.jpg">
+            <img src="img/face-15.jpg">
+            <img src="img/face-16.jpg">
+            <img src="img/face-17.jpg">
+            <img src="img/face-19.jpg">
+            <img src="img/face-20.jpg">
+        </div>
+
+        <div class="bottom-caption"><b>Say Hi & Get in Touch<b></div>
+        <div class="bottom-description">Loren ipsum dolor sit amet, consectetur adipiscing elite suspendisse</div>
+        <ul class="bottom-icons">
+            <li class="soc-icons fa fa-twitter">
+            <li class="soc-icons fa fa-facebook">
+            <li class="soc-icons fa fa-pinterest-p">
+            <li class="soc-icons fa fa-google-plus">
+            <li class="soc-icons fa fa-linkedin">
+            <li class="soc-icons fa fa-youtube">
+        </ul>
+    </div>
+</div>
+<footer>
+    <div class="wrap">
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li>Contact</li>
+                <li>Download</li>
+                <li>Press</li>
+                <li>Email</li>
+                <li>Support</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
