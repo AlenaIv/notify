@@ -10,12 +10,23 @@
             var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
             if (re.test(str)) status.innerHTML = "Correct Email";
             else status.innerHTML = "Email is incorrect";
-            if (isEmpty(str)) status.innerHTML = "The field is empty";
+            if (isEmpty(str)) status.innerHTML ="The field is empty";
         }
         function isEmpty(str) {
             return (str == null) || (str.length == 0);
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+
+            $('.middle-icon::before').spin( function(){ $(this).addClass('spin') }, function(){ $(this).removeClass('spin') } )( "ready!" )});
+        $( document ).ready(function() {
+            $('#elm').hover(
+                    function(){ $(this).addClass('hover') },
+                    function(){ $(this).removeClass('hover') } )
+        });
+        </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
@@ -29,7 +40,6 @@
     <div class="wrap">
         <div class='header-content'>
             <img class="logo" src="img/text.png">
-
             <div class="intro">A great new free psd theme to showcase your new application.</div>
             <ul class="icon">
                 <li class="device-icon fa fa-apple"></li>
@@ -42,24 +52,21 @@
 <div class="wrap">
     <div class="middle">
         <div class="col-1">
-            <img src="img/middle-icon-1.png">
-
+            <div class="middle-icon fa fa-cog"></div>
             <div class="middle-caption"><b>Editable Theme</b></div>
             <div class="middle-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                 fringilla fringilla.
             </div>
         </div>
         <div class="col-2">
-            <img src="img/middle-icon-2.png">
-
+            <div class="middle-icon fa fa-star"></div>
             <div class="middle-caption"><b>Flat Design</b></div>
             <div class="middle-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                 fringilla fringilla.
             </div>
         </div>
         <div class="col-3">
-            <img src="img/middle-icon-3.png">
-
+            <div class="middle-icon fa fa-globe"></div>
             <div class="middle-caption"><b>Reach Your Audience</b></div>
             <div class="middle-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                 fringilla fringilla.
@@ -76,8 +83,9 @@
                 dapibus, ultricies nisl at, henderit risusuis omare luctus id sollicituding ante lobortis at.
             </div>
             <form action="handler.php">
-                <input type="email" id="email" placeholder="Email Adress"><span id="status"></span>
+                <input type="email" id="email" placeholder="Email Adress">
                 <input type="button" class="button" value="Notify" onclick="isEmail()">
+                <p><span id="status"></span></p>
             </form>
 
         </div>
@@ -97,27 +105,26 @@
             </blockquote>
             <div class="quote-sign"><b>Jane Hunt</b></div>
         </div>
-        <div class="faces">
-            <img src="img/face-2.jpg"></li>
-            <img src="img/face-3.jpg">
-            <img src="img/face-4.jpg">
-            <img src="img/face-5.jpg">
-            <img src="img/face-6.jpg">
-            <img src="img/face-7.jpg">
-            <img src="img/face-8.jpg">
-            <img src="img/face-9.jpg">
-            <img src="img/face-10.jpg">
-            <img src="img/face-11.jpg">
-            <img src="img/face-12.jpg">
-            <img src="img/face-13.jpg">
-            <img src="img/face-14.jpg">
-            <img src="img/face-15.jpg">
-            <img src="img/face-16.jpg">
-            <img src="img/face-17.jpg">
-            <img src="img/face-19.jpg">
-            <img src="img/face-20.jpg">
-        </div>
-
+        <ul class="faces">
+            <li><img src="img/face-2.jpg"></li>
+            <li><img src="img/face-3.jpg"></li>
+            <li><img src="img/face-4.jpg"></li>
+            <li><img src="img/face-5.jpg"></li>
+            <li><img src="img/face-6.jpg"></li>
+            <li><img src="img/face-7.jpg"></li>
+            <li><img src="img/face-8.jpg"></li>
+            <li><img src="img/face-9.jpg"></li>
+            <li><img src="img/face-10.jpg"></li>
+            <li><img src="img/face-11.jpg"></li>
+            <li><img src="img/face-12.jpg"></li>
+            <li><img src="img/face-13.jpg"></li>
+            <li><img src="img/face-14.jpg"></li>
+            <li><img src="img/face-15.jpg"></li>
+            <li><img src="img/face-16.jpg"></li>
+            <li><img src="img/face-17.jpg"></li>
+            <li><img src="img/face-19.jpg"></li>
+            <li><img src="img/face-20.jpg"></li>
+        </ul>
         <div class="bottom-caption"><b>Say Hi & Get in Touch<b></div>
         <div class="bottom-description">Loren ipsum dolor sit amet, consectetur adipiscing elite suspendisse</div>
         <ul class="bottom-icons">

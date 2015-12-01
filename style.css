@@ -1,3 +1,4 @@
+
 body{
 	/*убираем с боди стандартный отступ от краев*/
 	margin:0px;
@@ -81,11 +82,62 @@ width: 33%;
 float: left;
 text-align: center;
 }
-.col-1 img {
-width: 98px;
-height: 98px;
-margin-top: 50px;
+.middle-icon {
+	display: inline-block;
+	background:#2ecc71;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 50%;
+	margin-right: 10px;
+	width: 98px;
+	height: 98px;
+	margin-top: 50px;
+	color: white;
+	padding: 29px 0px;
 }
+.middle-icon::before{
+	font-size: 43px;
+}
+.middle-icon :hover {
+	-webkit-animation-name: spin;
+	-webkit-animation-duration: 600ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: spin;
+	-moz-animation-duration: 600ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-ms-animation-name: spin;
+	-ms-animation-duration: 600ms;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-timing-function: linear;
+
+	animation-name: spin;
+	animation-duration: 600ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+	from { -ms-transform: rotate(0deg); }
+	to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+	from { -moz-transform: rotate(0deg); }
+	to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
+}
+
 .col-2 img {
 width: 98px;
 height: 98px;
@@ -125,7 +177,7 @@ float: left;
 }
 .grey-caption {
 color: #222;
-font-family: Raleway;
+font-family: Raleway, sans-serif;
 font-size: 22px;
 margin-top: 40px;
 margin-left: 20px;
@@ -162,17 +214,32 @@ width: 800px;
 }
 .quote-sign {
 color: #2e2e2e;
-font-family: Raleway;
+font-family: Raleway, sans-serif;
 font-size: 18px;
 text-align: center;
 margin: 5px 0px 20px 0px;
 }
-.faces img {
+ul .faces li {
+	display: inline;
+	list-style-type: none;
+}
+.faces li img {
 text-align: center;
 margin-top: 0px;
 float: right;
 margin: 0px 5px 45px 0px;
 }
+.cover{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 50px;
+	z-index: 10;
+	background-color: rgba(46,204,113,0.2);
+}
+
 .bottom-caption {
 color: #222;
 text-align: center;
@@ -266,4 +333,8 @@ iframe {
 	margin: 40px 10px 40px 30px;
 	text-align: center;
 	border-radius: 10px;
+}
+span {
+	color: maroon;
+	font-family: "Bookman Old Style", sans-serif;
 }
