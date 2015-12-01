@@ -19,14 +19,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script>
         $( document ).ready(function() {
+            $( '.middle-icon' ).hover(
+                    function(){
+                        $(this).addClass('fa-spin')
+                    },
+                    function(){
+                        $(this).removeClass('fa-spin')
 
-            $('.middle-icon::before').spin( function(){ $(this).addClass('spin') }, function(){ $(this).removeClass('spin') } )( "ready!" )});
-        $( document ).ready(function() {
-            $('#elm').hover(
-                    function(){ $(this).addClass('hover') },
-                    function(){ $(this).removeClass('hover') } )
+                    } )
         });
-        </script>
+    </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
