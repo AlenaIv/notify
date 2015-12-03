@@ -179,7 +179,7 @@ font-size: 18px;
 text-align: center;
 margin: 5px 0px 20px 0px;
 }
-ul .faces li {
+.faces li {
 	display: inline-block;
 	list-style-type: none;
 }
@@ -187,9 +187,8 @@ ul .faces li {
 text-align: center;
 margin-top: 0px;
 float: right;
-margin: 0px 5px 45px 0px;
+margin: 0px 2px 45px 0px;
 	position: relative;
-	display: inline-block;
 }
 .bottom-caption {
 color: #222;
@@ -292,9 +291,13 @@ span {
 .faces li::before{
 	position: absolute;
 	content: "";
-	display: block;
+	display: none;
 	height: 50px;
 	width: 50px;
-	background-color: rgba(46,204,113, 0.5);
+	background-color: rgba(46,204,113, 0.7);
 	z-index: 10;
+}
+.active::before{
+display: block;
+
 }
