@@ -300,12 +300,13 @@ span {
 	color: maroon;
 	font-family: "Bookman Old Style", sans-serif;
 }
-img ::before{
+.faces li::before{
 	position: absolute;
 	content: "";
 	display: block;
 	height: 50px;
 	width: 50px;
-	background-color: rgba(46,204,113, 0.6);
+	background-color: rgba(46,204,113, 0.1);
+
 	z-index: 10;
 }
