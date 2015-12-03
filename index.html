@@ -29,6 +29,18 @@
                     } )
         });
     </script>
+    <script>
+        $( document ).ready(function() {
+            $( ".faces li" ).hover(
+                    function(){
+                        $(this).addClass('active')
+                    },
+                    function(){
+                        $(this).removeClass('active')
+
+                    } )
+        });
+    </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
@@ -108,7 +120,7 @@
             <div class="quote-sign"><b>Jane Hunt</b></div>
         </div>
         <ul class="faces">
-            <li class="active"><img src="img/face-2.jpg"></li>
+            <li><img src="img/face-2.jpg"></li>
             <li><img src="img/face-3.jpg"></li>
             <li><img src="img/face-4.jpg"></li>
             <li><img src="img/face-5.jpg"></li>
